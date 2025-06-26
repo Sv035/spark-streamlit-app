@@ -23,7 +23,7 @@ st.title("⚡ Spark Detection from Video (YOLOv8)")
 # Load trained YOLOv8 model
 @st.cache_resource
 def load_model():
-    model_path = "yolov8n.pt"
+    model_path = "yolov8n-obbnew.pt"
     if not os.path.exists(model_path):
         st.error(f"❌ Model file '{model_path}' not found. Please upload it to the app folder.")
         return None
