@@ -23,12 +23,17 @@ st.title("⚡ Spark Detection from Video (YOLOv8-OBB)")
 # Load trained YOLOv8 model
 @st.cache_resource
 def load_model():
+    model_path = "best.pt"
+    if not os.path.exists(model_path):
+        st.error(f"❌ Model file '{model_path}' not found. Please upload it to the app folder.")
+        return None
     try:
-        model = YOLO("best.pt")  # Make sure best.pt is in the same folder or repo
+        model = YOLO(model_path)
         return model
     except Exception as e:
         st.error(f"Model loading failed: {e}")
         return None
+
 
 model = load_model()
 
