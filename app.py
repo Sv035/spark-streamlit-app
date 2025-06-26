@@ -22,7 +22,6 @@ st.title("⚡ Spark Detection from Video (YOLOv8-OBB)")
 
 # Load trained YOLOv8 model
 @st.cache_resource
-@st.cache_resource
 def load_model():
     model_path = "best.pt"
     if not os.path.exists(model_path):
