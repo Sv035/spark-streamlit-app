@@ -18,7 +18,7 @@ if password != PASSWORD:
     st.stop()
 
 st.set_page_config(page_title="Spark Detection", layout="centered")
-st.title("⚡ Spark Detection from Video (YOLOv8)")
+st.title("⚡ Spark Detection from Video (YOLOv8-OBB)")
 
 # Load trained YOLOv8 model
 @st.cache_resource
